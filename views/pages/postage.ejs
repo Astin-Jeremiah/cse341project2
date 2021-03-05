@@ -11,9 +11,23 @@
       <br><br>
       <div class="card col-md-6 offset-md-3 p-2">
                 <h4 class="mb-3">Postage Cost</h4>
-                <p>$<%= rate %></p>
-                <p>$<%= name %></p>
-                <p>$<%= weight %></p>
+                
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Mail Type</th>
+                      <th scope="col">Weight</th>
+                      <th scope="col">Postage Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><%= name %></td>
+                      <td><%= weight %> oz.</td>
+                      <td>$<%= rate %></td>
+                    </tr>
+                  </tbody>
+                </table>
           </div>   
       </main>
     </div> 
