@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/form.html'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
