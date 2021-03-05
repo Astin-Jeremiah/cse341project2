@@ -248,7 +248,8 @@ function calcPostage(request, response) {
 for (let i=0; i<rates.length; i++ ) {
   if (weight == rates[i].weight && type == rates[i].type) {
     let postalrate = rates[i].rate;
-    const params = {rate: postalrate};
+    let p = postalrate.toFixed(2);
+    const params = {rate: p};
     response.render('pages/postage', params);
   }
 }
