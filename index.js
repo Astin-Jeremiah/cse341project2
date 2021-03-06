@@ -7,13 +7,13 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
 
-app.get('/postage', calcPostage);
+app.get('/postage', calculateRate);
 
 app.listen(port, function() {
   console.log('Node app is running on port', port);
 });
 
-function calcPostage(request, response) {
+function calculateRate(request, response) {
   const weight = request.query.weight;
   const type = request.query.type;
   console.log(weight);
