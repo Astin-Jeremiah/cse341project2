@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
 
-app.get('/postage', calculateRate);
+var other = require('/public')(app);
 
 app.listen(port, function() {
   console.log('Node app is running on port', port);

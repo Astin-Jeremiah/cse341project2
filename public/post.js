@@ -1,4 +1,7 @@
-var another = require('./index.js');
+module.exports = function(app) {
+    app.get('/postage', calculateRate);
+};
+
 
 function calculateRate(request, response) {
   const weight = request.query.weight;
