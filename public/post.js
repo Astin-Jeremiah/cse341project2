@@ -1,5 +1,5 @@
 module.exports = function(app) {
-    app.get('/postage', calculateRate);
+    app.get('postage', calculateRate);
 };
 
 
