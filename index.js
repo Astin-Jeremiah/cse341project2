@@ -40,56 +40,6 @@ function calcPostage(request, response) {
   "name" : "Letter - Stamped",
   "rate" : 1.15
 }, {
-  "type": 1,
-  "weight": 4,
-  "name" : "Letter - Stamped",    
-  "rate" : 1.60
-}, {
-  "type": 1,
-  "weight": 5,
-  "name" : "Letter - Stamped",    
-  "rate" : 1.80
-}, {
-  "type": 1,
-  "weight": 6,
-  "name" : "Letter - Stamped",
-  "rate" : 2.00
-}, {
-  "type": 1,
-  "weight": 7,
-  "name" : "Letter - Stamped",
-  "rate" : 2.20
-}, {
-  "type": 1,
-  "weight": 8,
-  "name" : "Letter - Stamped",
-  "rate" : 2.40
-}, {
-  "type": 1,
-  "weight": 9,
-  "name" : "Letter - Stamped",
-  "rate" : 2.60
-}, {
-  "type": 1,
-  "weight": 10,
-  "name" : "Letter - Stamped",
-  "rate" : 2.80
-}, {
-  "type": 1,
-  "weight": 11,
-  "name" : "Letter - Stamped",
-  "rate" : 3.00
-}, {
-  "type": 1,
-  "weight": 12,
-  "name" : "Letter - Stamped",
-  "rate" : 3.20
-}, {
-  "type": 1,
-  "weight": 13,
-  "name" : "Letter - Stamped",
-  "rate" : 3.40
-}, {
   "type": 2,
   "weight": 1,
   "name" : "Letter - Metered",
@@ -110,56 +60,6 @@ function calcPostage(request, response) {
 "name" : "Letter - Metered",
 "rate" : 1.11
 }, {
-"type": 2,
-"weight": 4,
-"name" : "Letter - Metered",
-"rate" : 1.60
-}, {
-"type": 2,
-"weight": 5,
-"name" : "Letter - Metered",
-"rate" : 1.80
-}, {
-"type": 2,
-"weight": 6,
-"name" : "Letter - Metered",
-"rate" : 2.00
-}, {
-"type": 2,
-"weight": 7,
-"name" : "Letter - Metered",
-"rate" : 2.20
-}, {
-"type": 2,
-"weight": 8,
-"name" : "Letter - Metered",
-"rate" : 2.40
-}, {
-"type": 2,
-"weight": 9,
-"name" : "Letter - Metered",
-"rate" : 2.60
-}, {
-"type": 2,
-"weight": 10,
-"name" : "Letter - Metered",
-"rate" : 2.80
-}, {
-"type": 2,
-"weight": 11,
-"name" : "Letter - Metered",
-"rate" : 3.00
-}, {
-"type": 2,
-"weight": 12,
-"name" : "Letter - Metered",
-"rate" : 3.20
-}, {
-"type": 2,
-"weight": 13,
-"name" : "Letter - Metered",
-"rate" : 3.40
-},{
   "type": 3,
   "weight": 1,
   "name" : "Large Envelopes - Flats",
