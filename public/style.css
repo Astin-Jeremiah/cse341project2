@@ -29,7 +29,7 @@
 
 .column1 {
   flex-shrink: 0; 
-  flex-basis: 60%; 
+  flex-basis: 50%; 
 }
 
 .column1, .column2 {
