@@ -16,15 +16,23 @@ window.addEventListener('load', () => {
 function getQuestions() {
   let URL = "/getQuestions";
   fetch(URL)
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.ok) {
+          return response;
+      } alertify.alert('Error Loading Questions');
+    })
+    .then ( response => response.json())
     .then((jsObject) => {
       if (jsObject.length == 0) {
         console.log("NO RESULTS");
       } else {
 		question(jsObject);
       }
-    });
-}
+    }) .catch((error) => {
+      console.log(error);
+      alertify.alert('Error Loading Questions');})
+  };
+
 
 function question (jsObject) {
     console.log(jsObject);
