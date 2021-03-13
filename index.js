@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
 
-let url = "https://opentdb.com/api.php?amount=10&type=multiple";
+let url = "https://opentdb.com/api.php?amount=10&category=9&type=multiple";
 let settings = { method: "Get" };
 
 app.get('/getQuestions', function(req, res, next) {
