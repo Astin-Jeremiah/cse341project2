@@ -5,7 +5,6 @@
     <title>Who Wants To Be A Millionaire</title>
     <link href="style.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="alertify.css">
-    <link rel="stylesheet" href="bootstrap.css">  
     <script src="javascript/alertify.js"></script>
     </head>
   <body>
@@ -19,17 +18,17 @@
         <div id="questionarea">
                 <h3 class="cen" id="question"></h3>
                 <br>
-                <div class="" data-ans="0" onclick="check(this)">
-                    <a href="#" class="button">A: <span id="a1"></span></a>
+                <div data-choice="0" class="choice-container">
+                    <p class="button" data-ans="0" onclick="check(this)">A: <span id="a1"></span> </p>
                 </div><br>
-                <div class="choice-container" data-ans="1" onclick="check(this)">
-                    <a href="#" class="button">B: <span id="b1"></span></a>
+                <div data-choice="1" class="choice-container">
+                    <p class="button" data-ans="1" onclick="check(this)">B: <span id="b1"></span></p>
                 </div><br>
-                <div class="choice-container" data-ans="2" onclick="check(this)">
-                    <a href="#" class="button">C: <span id="c1"></span></a>
+                <div data-choice="2" class="choice-container">
+                    <p class="button" data-ans="2" onclick="check(this)">C: <span id="c1"></span> </p>
                 </div><br>
-                <div class="choice-container" data-ans="3" onclick="check(this)">
-                    <a href="#" class="button">D: <span id="d1"></span></a>
+                <div  data-choice="3" class="choice-container">
+                    <p class="button" data-ans="3" onclick="check(this)">D: <span id="d1"></span></p>
                 </div><br>
                 <p class="cen" id="times">Quit Game</p>
             </div><br><br>
@@ -39,22 +38,22 @@
     <div>
         <ul class="cen">
             <li class="text-center"><span id="name"></span></li><br>
-            <li class="text-center"><span class="circle">50:50</span><span class="circle">50:50</span><span class="circle">50:50</span></li><br>
-            <li class="">$1,000,000</li>
-            <li class="">$500,000</li>
-            <li class="">$250,000</li>
-            <li class="">$125,000</li>
-            <li class="">$64,000</li>
-            <li class="">$32,000</li>
-            <li class="">$16,000</li>
-            <li class=""$8,000</li>
-            <li class="">$4,000</li>
-            <li class="">$2,000</li>
-            <li class="">$1,000</li>
-            <li class="">$500</li>
-            <li class="">$300</li>
-            <li class="">$200</li>
-            <li class="highlight">$100</li>
+            <li class="text-center"><span class="circle" onclick="lifeline(this)">50:50</span><span class="circle" onclick="lifeline(this)">50:50</span><span class="circle" onclick="lifeline(this)">50:50</span></li><br>
+            <li class="money">$1,000,000</li>
+            <li class="money">$500,000</li>
+            <li class="money">$250,000</li>
+            <li class="money">$125,000</li>
+            <li class="money">$64,000</li>
+            <li class="money">$32,000</li>
+            <li class="money">$16,000</li>
+            <li class="money">$8,000</li>
+            <li class="money">$4,000</li>
+            <li class="money">$2,000</li>
+            <li class="money">$1,000</li>
+            <li class="money">$500</li>
+            <li class="money">$300</li>
+            <li class="money">$200</li>
+            <li class="money highlight">$100</li>
         </ul>
       </div>
       </div>

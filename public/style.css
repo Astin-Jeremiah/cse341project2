@@ -52,10 +52,41 @@
   box-sizing: border-box;
 }
 
+.correct {
+  width: 60%;
+  margin: auto;    
+  display: block;
+  position: relative;
+  background: #fff;
+  line-height: 80px;
+  text-align: center;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.wrong {
+  width: 60%;
+  margin: auto;    
+  display: block;
+  position: relative;
+  background: #fff;
+  line-height: 80px;
+  text-align: center;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
 .button:hover, .button:hover:after, .button:hover:before  {
   background: #ffc107;  
 }
 
+.wrong, .wrong:after, .wrong:before  {
+  background: red; 
+}
+
+.correct, .correct:after, .correct:before  {
+  background: green; 
+}
 
 .button:after,
 .button:before {
@@ -67,6 +98,27 @@
   pointer-events: none;
   background: #fff;
 }
+
+.correct:after,
+.correct:before {
+  top: 50%;
+  content: " ";
+  height: 43px;
+  width: 43px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.wrong:after,
+.wrong:before {
+  top: 50%;
+  content: " ";
+  height: 43px;
+  width: 43px;
+  position: absolute;
+  pointer-events: none;
+}
+
 .button:after {
   left: -1px;
   margin-top: -40px;
@@ -74,6 +126,23 @@
   box-sizing: border-box;
   transform: rotate(57.5deg) skew(30deg);
 }
+
+.correct:after {
+  left: -1px;
+  margin-top: -40px;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  transform: rotate(57.5deg) skew(30deg);
+}
+
+.wrong:after {
+  left: -1px;
+  margin-top: -40px;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  transform: rotate(57.5deg) skew(30deg);
+}
+
 .button:before {
   right: -44px;
   margin-top: -40px;
@@ -81,6 +150,23 @@
   box-sizing: border-box;
   transform: rotate(57.5deg) skew(30deg);
 }
+
+.correct:before {
+  right: -44px;
+  margin-top: -40px;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  transform: rotate(57.5deg) skew(30deg);
+}
+
+.wrong:before {
+  right: -44px;
+  margin-top: -40px;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  transform: rotate(57.5deg) skew(30deg);
+}
+
 
 .circle {
         border-radius: 50%;
@@ -109,4 +195,6 @@ li {
     font-family: 'Balthazar', serif;
 }
 
-
+.hidden {
+    display: none;
+}
