@@ -12,7 +12,7 @@ const intro = new Audio('../img/start.mp3');
 const fifty = new Audio('../img/life.mp3');
 const yes = new Audio('../img/correct.mp3');
 const no = new Audio('../img/wrong.mp3');
-
+let URL = "/getQuestionseasy";
 
 window.addEventListener('load', () => {
     alertify.prompt('Please Enter Your Name', '', function (evt, value) {
@@ -24,19 +24,17 @@ window.addEventListener('load', () => {
 });
 
 function checklevel(i) {
-  if (i > 8) {
-       URL = "/getQuestionseasy";
-  } else if (i > 2 && i < 9 ) {
+  if (i == 8) {
        URL = "/getQuestionsmedium";
-  }  else if (i >= 2) {
+      getQuestions();
+  } else if (i == 2) {
        URL = "/getQuestionshard";
+      getQuestions();
   }
-   console.log(URL);  
 };
 
-
 function getQuestions() { 
-  checklevel(i);    
+      
   fetch(URL)
     .then((response) => {
       if (response.ok) {
@@ -102,7 +100,8 @@ function check (clickedElement) {
             unlock(an, 'check');
             unlock(ll, 'lifeline');
             reset();
-            getQuestions(i);
+            checklevel(i);
+            question(json);
         }, 4000);
         } else {
         no.play();
@@ -156,11 +155,4 @@ function reset() {
     const wrong = document.getElementsByClassName("button");
     wrong[one].classList.remove('hidden');
     wrong[two].classList.remove('hidden');
-}
-
-
-
-
-
-
-
+};

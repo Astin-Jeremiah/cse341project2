@@ -8,9 +8,9 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
 
-let url1 = "https://opentdb.com/api.php?amount=15&difficulty=easy&type=multiple";
-let url2 = "https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple";
-let url3 = "https://opentdb.com/api.php?amount=15&difficulty=hard&type=multiple";
+let url1 = "https://opentdb.com/api.php?amount=15&category=9&difficulty=easy&type=multiple";
+let url2 = "https://opentdb.com/api.php?amount=15&category=9&difficulty=medium&type=multiple";
+let url3 = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
 let settings = { method: "Get" };
 
 app.get('/getQuestionseasy', function(req, res, next) {
