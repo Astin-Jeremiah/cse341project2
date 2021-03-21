@@ -12,7 +12,7 @@ let url1 = "https://opentdb.com/api.php?amount=15&category=9&difficulty=easy&typ
 let url2 = "https://opentdb.com/api.php?amount=15&category=9&difficulty=medium&type=multiple";
 let url3 = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
 let settings = { method: "Get" };
-let settings2 = { method: "Post" };
+
 
 app.get('/getQuestionseasy', function(req, res, next) {
   fetch(url1, settings).then(res => res.json())
@@ -34,8 +34,8 @@ app.get('/getQuestionsmedium', function(req, res, next) {
       res.write("Error Connecting To API");})
 });
 
-app.post('/getQuestionshard', function(req, res, next) {
-  fetch(url3, settings1).then(res => res.json())
+app.get('/getQuestionshard', function(req, res, next) {
+  fetch(url3, settings).then(res => res.json())
     .then((json) => {
       res.status(200).json(json);
   }) .catch((error) => {
