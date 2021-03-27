@@ -120,7 +120,9 @@ function check (clickedElement) {
         console.log(mon);
         const amount = mon.dataset.wrong;
         console.log(amount);
-        alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Game Over " + name + "!<br> You Won $" + amount +"", function(){window.location.reload(true);}).set('label', 'New Game!'); 
+        setTimeout(function() {
+            alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Game Over " + name + "!<br> You Won $" + amount +"", function(){window.location.reload(true);}).set('label', 'New Game!'); 
+        }, 4000);
     }
     
 }
