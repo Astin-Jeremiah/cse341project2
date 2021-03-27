@@ -5,9 +5,12 @@
     font-family: 'Allerta', sans-serif;
   }
 
+body {
+    background-color: #212529;
+}
+
 #game {
     width: 1100px;
-    background-color: #212529;
     margin: auto;
 }
 
@@ -27,6 +30,10 @@
     display:flex;
 }
 
+.choice-container{
+    height: 60px;
+}
+
 .column1 {
   flex-shrink: 0; 
   flex-basis: 50%; 
@@ -41,7 +48,7 @@
 }
 
 .button {
-  width: 60%;
+  width: 80%;
   margin: auto;    
   display: block;
   position: relative;
@@ -50,10 +57,11 @@
   text-align: center;
   font-size: 20px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .correct {
-  width: 60%;
+  width: 80%;
   margin: auto;    
   display: block;
   position: relative;
@@ -65,7 +73,7 @@
 }
 
 .wrong {
-  width: 60%;
+  width: 80%;
   margin: auto;    
   display: block;
   position: relative;
@@ -167,7 +175,6 @@
   transform: rotate(57.5deg) skew(30deg);
 }
 
-
 .circle {
         border-radius: 50%;
         padding: 10px;
@@ -177,6 +184,7 @@
         text-align: center;
         font: 20px Arial, sans-serif;
         margin: 5px;
+        cursor: pointer;
 }
 
 .circle:hover {
@@ -197,4 +205,17 @@ li {
 
 .hidden {
     display: none;
+}
+
+#times {
+    cursor: pointer;
+}
+
+.ajs-cancel, .ajs-commands {
+  display: none;
+}
+
+.ajs-content {
+    margin: auto;
+    text-align: center;
 }

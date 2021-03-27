@@ -1,4 +1,4 @@
-const name = document.getElementById("name");
+const nam = document.getElementById("name");
 const questionarea = document.getElementById("question");
 const a1 = document.getElementById("a1");
 const b1 = document.getElementById("b1");
@@ -15,8 +15,9 @@ const no = new Audio('../img/wrong.mp3');
 let URL = "/getQuestionseasy";
 
 window.addEventListener('load', () => {
-    alertify.prompt('Please Enter Your Name', '', function (evt, value) {
-        name.innerHTML = value;
+    alertify.prompt('<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png" alt="Who Wants To Be A Millionaire?" width="150" height="150"><br><br>Please Enter Your Name', '', function (evt, value) {
+        window.name = value;
+        nam.innerHTML = name;
         intro.play();
         getQuestions(i);
     });
@@ -30,6 +31,8 @@ function checklevel(i) {
   } else if (i == 2) {
        URL = "/getQuestionshard";
       getQuestions();
+  } else {
+      question(json);
   }
 };
 
@@ -81,18 +84,21 @@ function check (clickedElement) {
     const ans = an[n];
     console.log(an[n]);
     const money = document.getElementsByClassName("money");
-    if (number == n){
-        yes.play();
+        if (number == n){
         lock(an);
         lock(ll);
         clickedElement.classList.remove('button');
         clickedElement.classList.add('correct');
+        yes.play();
         setTimeout(function () {
             clickedElement.classList.remove('correct');
             clickedElement.classList.add('button');
             console.log(i);
             money[i].classList.remove('highlight');
             console.log(money[i]);
+            if (i==0) {
+                 alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Congratulations " + name + "!<br> You Won $1,000,000", function(){window.location.reload(true);}).set('label', 'New Game!'); 
+                }
             i=i-1;
             money[i].classList.add('highlight');
             console.log(i);
@@ -101,7 +107,6 @@ function check (clickedElement) {
             unlock(ll, 'lifeline');
             reset();
             checklevel(i);
-            question(json);
         }, 4000);
         } else {
         no.play();
@@ -111,7 +116,11 @@ function check (clickedElement) {
         clickedElement.classList.add('wrong');
         ans.classList.remove('button');
         ans.classList.add('correct');
-        alertify.confirm('GAME OVER<br>More Text Here', function(){window.location.reload(true);}).set('labels', {ok:'New Game', cancel:'Cancel'});
+        const mon = document.querySelector("[data-round=" + CSS.escape(i) + "]");
+        console.log(mon);
+        const amount = mon.dataset.wrong;
+        console.log(amount);
+        alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Game Over " + name + "!<br> You Won $" + amount +"", function(){window.location.reload(true);}).set('label', 'New Game!'); 
     }
     
 }
@@ -128,6 +137,8 @@ function lifeline (click) {
     console.log(wrong);
     wrong[one].classList.add('hidden');
     wrong[two].classList.add('hidden');
+    const buttons = document.getElementsByClassName("circle");
+    lock(buttons);
 }
 
 function random() {
@@ -156,3 +167,13 @@ function reset() {
     wrong[one].classList.remove('hidden');
     wrong[two].classList.remove('hidden');
 };
+
+function quit() {
+    const mon = document.querySelector("[data-round=" + CSS.escape(i) + "]");
+    console.log(mon);
+    const amount = mon.dataset.money;
+    console.log(amount);
+    alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Congratulations " + name + "!<br> You Won $" + amount +"", function(){window.location.reload(true);}).set('label', 'New Game!'); 
+}
+
+

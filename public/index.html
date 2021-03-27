@@ -18,19 +18,19 @@
         <div id="questionarea">
                 <h3 class="cen" id="question"></h3>
                 <br>
-                <div data-choice="0" class="choice-container">
-                    <p class="button" data-ans="0" onclick="check(this)">A: <span id="a1"></span> </p>
-                </div><br>
-                <div data-choice="1" class="choice-container">
+                <div class="choice-container">
+                    <p class="button ribbon-outset border" data-ans="0" onclick="check(this)">A: <span id="a1"></span> </p>
+                </div><br><br>
+                <div class="choice-container">
                     <p class="button" data-ans="1" onclick="check(this)">B: <span id="b1"></span></p>
-                </div><br>
-                <div data-choice="2" class="choice-container">
+                </div><br><br>
+                <div class="choice-container">
                     <p class="button" data-ans="2" onclick="check(this)">C: <span id="c1"></span> </p>
-                </div><br>
-                <div  data-choice="3" class="choice-container">
+                </div><br><br>
+                <div  class="choice-container">
                     <p class="button" data-ans="3" onclick="check(this)">D: <span id="d1"></span></p>
-                </div><br>
-                <p class="cen" id="times">Quit Game</p>
+                </div><br><br>
+                <p class="cen" id="times" onclick="quit()">Quit Game</p>
             </div><br><br>
       </div>
         
@@ -39,21 +39,21 @@
         <ul class="cen">
             <li class="text-center"><span id="name"></span></li><br>
             <li class="text-center"><span class="circle" onclick="lifeline(this)">50:50</span><span class="circle" onclick="lifeline(this)">50:50</span><span class="circle" onclick="lifeline(this)">50:50</span></li><br>
-            <li class="money">$1,000,000</li>
-            <li class="money">$500,000</li>
-            <li class="money">$250,000</li>
-            <li class="money">$125,000</li>
-            <li class="money">$64,000</li>
-            <li class="money">$32,000</li>
-            <li class="money">$16,000</li>
-            <li class="money">$8,000</li>
-            <li class="money">$4,000</li>
-            <li class="money">$2,000</li>
-            <li class="money">$1,000</li>
-            <li class="money">$500</li>
-            <li class="money">$300</li>
-            <li class="money">$200</li>
-            <li class="money highlight">$100</li>
+            <li data-money="500,000" data-wrong="32,000" data-round="0" class="money">$1,000,000</li>
+            <li data-money="250,000" data-wrong="32,000" data-round="1" class="money">$500,000</li>
+            <li data-money="125,000" data-wrong="32,000" data-round="2" class="money">$250,000</li>
+            <li data-money="64,000" data-wrong="32,000" data-round="3" class="money">$125,000</li>
+            <li data-money="32,000" data-wrong="32,000" data-round="4" class="money">$64,000</li>
+            <li data-money="16,000" data-wrong="1,000" data-round="5" class="money">$32,000</li>
+            <li data-money="8,000" data-wrong="1,000" data-round="6" class="money">$16,000</li>
+            <li data-money="4,000" data-wrong="1,000" data-round="7" class="money">$8,000</li>
+            <li data-money="2,000" data-wrong="1,000" data-round="8" class="money">$4,000</li>
+            <li data-money="1,000" data-wrong="1,000" data-round="9" class="money">$2,000</li>
+            <li data-money="500" data-wrong="0" data-round="10" class="money">$1,000</li>
+            <li data-money="300" data-wrong="0" data-round="11" class="money">$500</li>
+            <li data-money="200" data-wrong="0" data-round="12" class="money">$300</li>
+            <li data-money="100" data-wrong="0" data-round="13" class="money">$200</li>
+            <li data-money="0" data-wrong="0" data-round="14" class="money highlight">$100</li>
         </ul>
       </div>
       </div>

@@ -65,8 +65,8 @@
             }
         },
         glossary:{
-            title:'Who Wants To Be A Millionaire',
-            ok: 'OK',
+            title:'',
+            ok: 'Start Game',
             cancel: 'Cancel',
             acccpt: 'Accept',
             deny: 'Deny',
