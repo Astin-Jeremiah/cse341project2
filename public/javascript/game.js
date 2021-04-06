@@ -74,6 +74,7 @@ function question (json) {
         d1.innerHTML = answerChoices[3];   
 }
 
+
 function check (clickedElement) {
     console.log(n);
     const number = clickedElement.getAttribute("data-ans");
@@ -177,5 +178,7 @@ function quit() {
     console.log(amount);
     alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Congratulations " + name + "!<br> You Won $" + amount +"", function(){window.location.reload(true);}).set('label', 'New Game!'); 
 }
+
+
 
 

@@ -85,7 +85,7 @@ body {
 }
 
 .button:hover, .button:hover:after, .button:hover:before  {
-  background: #ffc107;  
+  background: #ffc107; 
 }
 
 .wrong, .wrong:after, .wrong:before  {
