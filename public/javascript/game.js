@@ -59,12 +59,8 @@ function getQuestions() {
 
 
 function question (json) {
-    console.log(i);
-    console.log(json);
-    console.log(json.results[i].question);
     questionarea.innerHTML = json.results[i].question;
     n = random();
-    console.log(n);
     const ac = [...json.results[i].incorrect_answers];
     window.answerChoices = (ac);
     answerChoices.splice(n, 0, json.results[i].correct_answer);
@@ -76,14 +72,10 @@ function question (json) {
 
 
 function check (clickedElement) {
-    console.log(n);
     const number = clickedElement.getAttribute("data-ans");
-    console.log(number);
     const an = document.getElementsByClassName("button");
     const ll = document.getElementsByClassName("circle");
-    console.log(ll);
     const ans = an[n];
-    console.log(an[n]);
     const money = document.getElementsByClassName("money");
         if (number == n){
         lock(an);
@@ -91,19 +83,16 @@ function check (clickedElement) {
         clickedElement.classList.remove('button');
         clickedElement.classList.add('correct');
         yes.play();
+        yes.currentTime = 0;
         setTimeout(function () {
             clickedElement.classList.remove('correct');
             clickedElement.classList.add('button');
-            console.log(i);
             money[i].classList.remove('highlight');
-            console.log(money[i]);
             if (i==0) {
                  alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Congratulations " + name + "!<br> You Won $1,000,000", function(){window.location.reload(true);}).set('label', 'New Game!'); 
                 }
             i=i-1;
             money[i].classList.add('highlight');
-            console.log(i);
-            console.log(money[i]);
             unlock(an, 'check');
             unlock(ll, 'lifeline');
             reset();
@@ -118,9 +107,7 @@ function check (clickedElement) {
         ans.classList.remove('button');
         ans.classList.add('correct');
         const mon = document.querySelector("[data-round=" + CSS.escape(i) + "]");
-        console.log(mon);
         const amount = mon.dataset.wrong;
-        console.log(amount);
         setTimeout(function() {
             alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Game Over " + name + "!<br> You Won $" + amount +"", function(){window.location.reload(true);}).set('label', 'New Game!'); 
         }, 4000);
@@ -131,13 +118,9 @@ function check (clickedElement) {
 function lifeline (click) {
     fifty.play();
     click.classList.add('hidden');
-    console.log(n);
     one = generateRandom(0, 4);
     two = generateRandom(0, 4);
-    console.log(one);
-    console.log(two);
     const wrong = document.getElementsByClassName("button");
-    console.log(wrong);
     wrong[one].classList.add('hidden');
     wrong[two].classList.add('hidden');
     const buttons = document.getElementsByClassName("circle");
@@ -173,9 +156,7 @@ function reset() {
 
 function quit() {
     const mon = document.querySelector("[data-round=" + CSS.escape(i) + "]");
-    console.log(mon);
     const amount = mon.dataset.money;
-    console.log(amount);
     alertify.alert("<img src='https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/WWTBAMUS2020Logo.png/250px-WWTBAMUS2020Logo.png' alt='Who Wants To Be A Millionaire?' width='150' height='150'><br><br>Congratulations " + name + "!<br> You Won $" + amount +"", function(){window.location.reload(true);}).set('label', 'New Game!'); 
 }
 
